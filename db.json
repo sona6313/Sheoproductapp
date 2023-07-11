@@ -1,0 +1,72 @@
+{
+  "sheoproducts": [
+    {
+      "id": 1,
+      "img": "https://i.postimg.cc/vBwyGbF5/shoes-17801.png",
+      "title": "Nike M2K Tekro",
+      "price": 2600
+    },
+    {
+      "id": 2,
+      "img": "https://i.postimg.cc/pXmKCR8Q/pair-trainers.jpg",
+      "title": "Nike Air Max 270",
+      "price": 4000
+    },
+    {
+      "id": 3,
+      "img": "https://i.postimg.cc/ZnMpmMky/shoes-17775.png",
+      "title": "Nike React Element 55",
+      "price": 2800
+    },
+    
+    {
+      "id": 4,
+      "img": "https://i.postimg.cc/kG4KkdHm/shoes-17838.png",
+      "title": "Air Jardradion 1 Mid",
+      "price": 1000
+    },
+    {
+      "id": 5,
+      "img": "https://i.postimg.cc/KzQtqYJf/shoes-17837.png",
+      "title": "Nike Zoom Pegios Turbo",
+      "price": 5000
+    },
+    {
+      "id": 6,
+      "img": "https://i.postimg.cc/13Ncms3R/shoes-17791.png",
+      "title": "Nike Free Rine 5.0",
+      "price": 4000
+    },
+    {
+      "id": 7,
+      "img": "https://i.postimg.cc/13Ncms3R/shoes-17791.png",
+      "title": "Nike Zoom Pegios Turbo",
+      "price": 5080
+    },
+    {
+      "id": 8,
+      "img": "https://i.postimg.cc/vmF7Dk4r/shoes-17841.png",
+      "title": "Lebron 16",
+      "price": 6000
+    },
+    {
+      "id": 9,
+      "img": "https://i.postimg.cc/rFHN2KcY/shoes-17829.png",
+      "title": "Nike Air vapronMax plus",
+      "price": 20900
+    }
+    
+  ],
+  
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
+

@@ -1,0 +1,189 @@
+
+
+<div class="nav-container"> 
+    <div class="first-nav">
+        <!-- firstnaav -->
+    <mat-toolbar  class="navbar">
+        <img src="../../../assets/logo1.png" alt="" class="nav_img">
+          <div class="nav_items">
+            <aside class="items">
+            </aside>
+            <aside class="items">
+                <span routerLink="/shop">MAN</span>
+            </aside>
+            <aside class="items">
+              <span routerLink="/shop">WOMEN</span>
+            </aside>
+            <aside class="items">
+                <span routerLink="/shop">KIDS</span>
+              </aside>
+              <aside class="items">
+                <span routerLink="/shop">COLLECTIONS</span>
+              </aside>
+              <aside class="items">
+                <span routerLink="/shop">CONTACT</span>
+              </aside>
+            <aside class="items">
+                <input type="text" [(ngModel)]="searchItem" placeholder="Search...">
+            </aside>
+            <aside class="items">
+                <mat-icon matBadge="{{datalength.length}}" matBadgeColor="warn" routerLink="/view" class="demo-section" >add_shopping_cart</mat-icon>
+              </aside>
+            <aside>
+            </aside>
+          </div>
+    </mat-toolbar>
+  </div>
+     <div class="second-nav">
+          <!-- second nav using angular meterial -->
+  <mat-toolbar>
+    <div class="heading">
+        <h2>MAN SHEOS</h2>
+    </div>
+   <span class="example-spacer"></span>
+   <div class="items">
+    <span>Home</span><span class="material-icons-outlined">
+        chevron_right
+        </span>
+    <span>Pages</span><span class="material-icons-outlined">
+        chevron_right
+        </span>
+    <span>Sheos</span>
+   </div>
+ </mat-toolbar>
+     </div>
+</div>
+   <div class="third-nav">
+      
+<!-- thired nav using--- -->
+ <mat-toolbar>
+ 
+    <button mat-raised-button class="mat-buttons"  (click)="openediter()">
+        <span class="material-icons-outlined">
+            add
+            </span>Filter</button>
+            <span class="example-spacer"></span>
+                      
+ <div class="selects">
+    <label for="">Sort by:</label>
+    <select name="" id="">
+      <option value="popular">Popular</option>
+      <option value="advanced">Advanced</option>
+      <option value="latest">Latest</option>
+    </select>
+
+</div>
+ </mat-toolbar>
+</div>
+
+
+
+<!-- ----------------------------------- -->
+
+<div class="container-body">
+ <div class="containerTwo" *ngIf="open">
+      <div class="item-details" *ngif="open">
+          <p disabled>New Items <span>(11)</span></p>
+          <p disabled>Sell-out <span>(32)</span></p>
+       </div>
+       <fieldset>
+         <legend>CATOGORIES</legend>
+          <div class="catogorie-list">
+          <div class="listOne">
+              <ul>
+                <li>Air Max<span>(11)</span></li>
+                <li>Air Max<span>(11)</span></li>
+                <li>Air Max<span>(11)</span></li>
+                <li>Air Max<span>(11)</span></li>
+                <li>Air Max<span>(11)</span></li>
+              </ul>
+          </div>
+          <div class="listOne">
+          <ul>
+              <li>Air Max<span>(11)</span></li>
+              <li>Air Max<span>(11)</span></li>
+              <li>Air Max<span>(11)</span></li>
+              <li>Air Max<span>(11)</span></li>
+              <li>Air Max<span>(11)</span></li>
+          </ul>
+          </div>
+        </div>  
+      </fieldset>
+      <fieldset>
+         <legend>SEASON</legend>
+         <div class="checkbox">
+          <mat-checkbox class="example-margin">Summer<span>(117)</span></mat-checkbox>
+          <mat-checkbox class="example-margin">Spring<span>(180)</span></mat-checkbox>
+       </div>
+       <div class="checkbox">
+        <mat-checkbox class="example-margin">Autumn<span>(121)</span></mat-checkbox>
+        <mat-checkbox class="example-margin">Spring/Summer<span>(352)</span></mat-checkbox>
+      </div>
+      </fieldset>
+      <fieldset>
+          <legend>Colors <span>(11)</span></legend>
+           <div class="theme-options">
+              <div class="colorflex">
+                <div id="theme-white" class="colordiv"></div>
+                <div id="theme-grey" class="colordiv"></div>
+                <div id="theme-yelloewwhite" class="colordiv"></div>
+                <div id="theme-yellow" class="colordiv"></div>
+                <div id="theme-orange" class="colordiv"></div>
+                <div id="theme-red" class="colordiv"></div>
+              </div>
+                <div class="colorflex">
+                  <div id="theme-green" class="colordiv"></div>
+                  <div id="theme-blue" class="colordiv"></div>
+                  <div id="theme-rose" class="colordiv"></div>
+                  <div id="theme-greemn" class="colordiv"></div>
+                  <div id="theme-violet" class="colordiv"></div>
+                </div>
+               <div class="colorflex">
+                <div id="theme-grey" class="colordiv"></div>
+                <div id="theme-blackgreen" class="colordiv"></div>
+                <div id="theme-black" class="colordiv"></div>
+                <div id="theme-whitemilk" class="colordiv"></div>
+               </div>
+           </div>
+      </fieldset>
+      <fieldset>
+        <label for="size">Size:</label>
+        <select name="sizes" >
+          <option value="3.7 inch">3.7 inch</option>
+          <option value="3.7 inch">3.7 inch</option>
+          <option value="3.7 inch">3.7 inch</option>
+          <option value="3.7 inch">3.7 inch</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <label for="cars">Price:</label>
+        <select name="price">
+          <option value="1000">1000</option>
+          <option value="2000">2000</option>
+          <option value="3000">3000</option>
+          <option value="3900">3900</option>
+        </select>
+      </fieldset>
+ </div>
+
+<div class="content">
+    <mat-card class="example-card" *ngFor="let item of arrayOfShoes| pipes:searchItem let i=index" id="ZoomIn">
+    <img mat-card-image  class="card-img" src={{item.img}} alt="">
+    <mat-card-content>
+      <p>
+        {{item.title}}
+      </p>
+      <p>{{item.price | currency: 'INR'}}</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-button class="buttonclas" (click)="addfavourites(item)">Add to cart</button>
+        <button mat-button class="buttonclas" (click)=" viewproducts(i)">View procuct</button>
+      </mat-card-actions>
+  </mat-card>
+  
+</div>
+
+</div> 
+
+
